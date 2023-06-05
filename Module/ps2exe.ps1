@@ -2624,12 +2624,6 @@ $(if (!$noConsole) {@"
 
 						string script = System.Text.Encoding.UTF8.GetString(System.Convert.FromBase64String(@"$($script)"));
 
-						if (!string.IsNullOrEmpty(extractFN))
-						{
-							System.IO.File.WriteAllText(extractFN, script);
-							return 0;
-						}
-
 						pwsh.AddScript(script);
 
 						// parse parameters
